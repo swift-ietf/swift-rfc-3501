@@ -1,0 +1,11 @@
+# .github/metadata.yaml
+description: "Swift implementation of RFC 3501: Internet Message Access Protocol version 4rev1 (IMAP4rev1) commands and responses."
+topics:
+  - standards
+  - rfc
+  - rfc-3501
+  - imap
+  - email
+homepage: "https://swift-institute.org"
+readme:
+  family: E
