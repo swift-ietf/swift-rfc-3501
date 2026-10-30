@@ -17,6 +17,9 @@ let package = Package(
             targets: ["RFC 3501"]
         )
     ],
+    traits: [
+        .trait(name: "Coder", description: "Wire coders for RFC 3501 types")
+    ],
     dependencies: [
         .package(url: "https://github.com/swift-atoms/swift-byte.git", branch: "main")
     ],
@@ -30,7 +33,8 @@ let package = Package(
         .testTarget(
             name: "RFC 3501 Tests",
             dependencies: [
-                .target(name: "RFC 3501")
+                .target(name: "RFC 3501"),
+                .product(name: "Byte", package: "swift-byte", condition: .when(traits: ["Coder"])),
             ]
         ),
     ],
