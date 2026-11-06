@@ -1,7 +1,9 @@
 import RFC_3501
 import Testing
 
-extension RFC_3501.Command {
+enum `RFC_3501.Command Tests` {}
+
+extension `RFC_3501.Command Tests` {
 
     @Suite
     struct Test {
@@ -11,7 +13,7 @@ extension RFC_3501.Command {
     }
 }
 
-extension RFC_3501.Command.Test.Unit {
+extension `RFC_3501.Command Tests`.Test.Unit {
 
     @Test
     func `every command names its kind`() {
